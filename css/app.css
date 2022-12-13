@@ -1,3 +1,227 @@
-h4{
-    font-size: xx-large;
+* {
+  font-size: small;
+  font-weight: normal;
+  @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+  font-family: "Rubik", sans-serif;
 }
+body {
+  margin: 0px;
+  background-color: #f2f5fa;
+}
+/* end of body */
+nav {
+  background-color: #f2f5fa;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+.navbar {
+  margin-bottom: 5px;
+  height: 52px;
+  background-color: #fff;
+  box-shadow: rgba(182, 182, 208, 0.2) 0px 7px 29px 0px;
+}
+.searchbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0 50px 0;
+  gap: 4px;
+}
+.input {
+  box-sizing: border-box;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 0;
+  outline: none;
+  height: 36px;
+  background-color: #fff;
+
+  padding-left: 40px;
+  margin-left: -12px;
+}
+.search-icon {
+  position: relative;
+  left: 12px;
+  z-index: 2;
+  margin-top: 8px;
+}
+.search,
+.filter {
+  display: flex;
+  width: 100%;
+}
+.filter,
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+}
+.select,
+.options {
+  width: 160px;
+  margin-bottom: 4px;
+}
+.options span {
+  display: block;
+}
+.options {
+  position: absolute;
+  margin-right: -9px;
+  z-index: 2;
+  display: none;
+}
+.selects {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
+.select {
+  padding: 10px;
+}
+.option:first-child {
+  border-radius: 8px 8px 0px 0px;
+}
+.option:nth-child(2) {
+  border-radius: 0px 0px 8px 8px;
+}
+.option {
+  margin-bottom: 0px;
+  width: 100%;
+  padding: 10px;
+  box-shadow: rgba(182, 182, 208, 0.2) 0px 7px 29px 0px;
+  cursor: pointer;
+}
+.option:hover {
+  background-color: #94b7ee;
+}
+
+.down-icon {
+  position: relative;
+  right: 23px;
+  z-index: 2;
+  margin-top: 8px;
+}
+/* end of nav bar */
+
+main {
+  padding-top: 240px;
+}
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+}
+.card .image {
+  position: relative;
+}
+.card .name h3 {
+  font-size: 20px;
+  margin: 0;
+}
+.card .name h6 {
+  margin: 0;
+  color: #919191;
+}
+.card .catchphrase {
+  margin: 18px 0 18px 0;
+  color: #51c5ff;
+}
+.card hr {
+  margin-bottom: 18px;
+  border: 1px solid #e8e8e8;
+}
+.card p {
+  margin: 0;
+}
+.card span i {
+  margin-right: 8px;
+  font-size: 15px;
+  color: #015989;
+}
+.no-data{
+  position: absolute;
+  justify-self: center;
+  font-size: large;
+  text-align: center;
+}
+/* end of main */
+
+.container {
+  margin: 0 7% 0 7%;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px 0 10px 0;
+}
+/* end of helpers */
+
+@media (min-width: 320px) {
+  .searchbar {
+    flex-direction: column;
+  }
+  #search {
+    width: 100%;
+  }
+  .selects {
+    margin: 10px -10px 0 0px;
+  }
+  .options {
+    top: 50px;
+  }
+  .card hr {
+    display: block;
+  }
+  .card-section {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 2rem;
+  }
+  .card .image img {
+    max-height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 52px;
+  }
+}
+/* end of sm screen */
+@media (min-width: 700px) {
+  .searchbar {
+    flex-direction: row;
+  }
+  #search {
+    width: 70%;
+  }
+  .selects {
+    margin: 0px -10px 0 0px;
+  }
+  .options {
+    top: 40px;
+  }
+  .card hr {
+    display: none;
+  }
+  .card-section {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .card .image img {
+    position: relative;
+    right: 0;
+    top: 0;
+    border-radius: 8px 8px 0 0;
+    width: 100%;
+  }
+}
+/* end of md screen */
+@media (min-width: 1000px) {
+  .card-section {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+/* end of lg screen */
