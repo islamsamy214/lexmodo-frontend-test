@@ -4,20 +4,12 @@ $(document).ready(function () {
     $(".options").slideToggle(200);
   });
 
-  //search
-  //   $("#search").keyup(function () {
-  //     var value = $(this).val().toLowerCase();
-  //     $(".card-section .card").filter(function () {
-  //       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
-  //     });
-  //   });
-
   //  get users data
   let users = [];
 
   $.ajax({
     type: "GET",
-    url: "http://jsonplaceholder.typicode.com/users",
+    url: "https://jsonplaceholder.typicode.com/users",
     success: function (data) {
       users = data;
 
